@@ -1058,6 +1058,9 @@ function decide_type(digits,base=10) {
         config[2][l-4] = 1;
         config[2][0] = 1;
         special = special && l%2==0;
+        if (dl1 == 1 && dl2 == 0 && dl3 == 3) { //primetimer
+            special = false 
+         }
     } else if(dl1==1 && (dl2==1 || dl2==2) && (dl3==0 || dl3==1) && d0==0) {
         type = 'B3';
         config[0][l-1] = 1;
